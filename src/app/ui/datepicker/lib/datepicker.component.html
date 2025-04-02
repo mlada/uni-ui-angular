@@ -1,0 +1,29 @@
+<uni-input-control cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <label uni-label [attr.for]="options().id">{{ options().label }}</label>
+  <input
+    uni-input
+    type="tel"
+    [uniInputMask]="options().mask"
+    [uniInputMaskFrom]="options().maskForm"
+    [uniInputMaskTo]="options().maskTo"
+    [id]="options().id"
+    [formControl]="control()"
+    [placeholder]="options().placeholder ?? ''"
+    (click)="onOpen()"
+    (input)="onInput($event)"
+    [value]="12"
+  />
+</uni-input-control>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="open()"
+  [cdkConnectedOverlayWidth]="width"
+  [cdkConnectedOverlayOffsetY]="1"
+  (overlayOutsideClick)="onClose()"
+>
+  <div class="datepicker-overlay">
+    <uni-calendar [startDate]="control().value" (selected)="onSelected($event)"></uni-calendar>
+  </div>
+</ng-template>

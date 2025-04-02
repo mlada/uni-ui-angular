@@ -1,0 +1,5 @@
+@if (results$ | async; as hotels) {
+  @for (hotel of hotels; track hotel.hotelId) {
+    <uni-search-hotel-card [searchHotel]="hotel" />
+  }
+}

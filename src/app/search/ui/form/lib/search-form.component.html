@@ -1,0 +1,6 @@
+<form [formGroup]="form()" (ngSubmit)="onSubmit()">
+  <ng-content />
+  <uni-search-group mode="submit">
+    <button uni-button uniMode="primary" uniWidth="max" type="submit" i18n="Search Form|Find">Find</button>
+  </uni-search-group>
+</form>

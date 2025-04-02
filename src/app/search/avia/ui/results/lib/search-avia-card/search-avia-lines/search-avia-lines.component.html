@@ -1,0 +1,6 @@
+@if (searchFlight(); as flight) {
+  <uni-search-avia-line [searchLine]="flight | searchAviaLine"></uni-search-avia-line>
+  @if (flight.return_at) {
+    <uni-search-avia-line [searchLine]="flight | searchAviaLine: true"></uni-search-avia-line>
+  }
+}

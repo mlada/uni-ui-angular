@@ -1,0 +1,14 @@
+<uni-search-form [redirectTo]="redirectTo" [form]="form">
+  <uni-search-group mode="destination">
+    <uni-search-destination [control]="form.controls.from" [options]="options.from" />
+    <uni-search-reverse [form]="form" />
+    <uni-search-destination [control]="form.controls.to" [options]="options.to" />
+  </uni-search-group>
+  <uni-search-group mode="line">
+    <uni-search-group mode="date">
+      <uni-search-date [control]="form.controls.startDate" [options]="options.startDate" />
+      <uni-search-date [control]="form.controls.endDate" [options]="options.endDate" />
+    </uni-search-group>
+    <uni-search-passengers [control]="form.controls.passengers" [options]="options.passengers" />
+  </uni-search-group>
+</uni-search-form>

@@ -1,0 +1,4 @@
+<uni-input-control>
+  <label uni-label [attr.for]="options().id">{{ options().label }}</label>
+  <input [id]="options().id" uni-input type="number" [formControl]="control()" [placeholder]="options().placeholder ?? ''" />
+</uni-input-control>

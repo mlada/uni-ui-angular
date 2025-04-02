@@ -1,0 +1,20 @@
+@if (searchFlight(); as flight) {
+  <uni-card>
+    <div class="row is-price">
+      <div class="column">
+        <uni-search-avia-price [price]="flight.price"></uni-search-avia-price>
+      </div>
+      <div class="column">
+        <uni-search-avia-companies [airline]="flight.airline" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <uni-search-avia-lines [searchFlight]="flight" />
+      </div>
+      <div class="column">
+        <uni-search-avia-buy [searchFlight]="flight" />
+      </div>
+    </div>
+  </uni-card>
+}

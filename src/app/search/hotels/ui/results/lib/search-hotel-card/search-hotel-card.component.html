@@ -1,0 +1,9 @@
+@if (searchHotel(); as hotel) {
+  <uni-card>
+    <uni-search-hotel-photos [searchHotel]="hotel" />
+    <uni-search-hotel-title [title]="hotel.hotelName" />
+    <uni-search-hotel-stars [stars]="hotel.stars" />
+    <uni-search-hotel-price [searchHotel]="hotel" />
+    <uni-search-hotel-view [searchHotel]="hotel" />
+  </uni-card>
+}

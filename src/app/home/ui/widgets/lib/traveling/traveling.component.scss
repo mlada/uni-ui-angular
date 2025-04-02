@@ -1,0 +1,22 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  img {
+    height: auto;
+  }
+}
+
+.traveling-info {
+  position: relative;
+}
+
+.traveling-card {
+  text-shadow: rgba(0, 0, 0, 0.3) 0 0;
+
+  @include device.media-tablet-up() {
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    z-index: 1;
+  }
+}
