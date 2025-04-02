@@ -23,8 +23,8 @@ To enhance the user interface, a custom UI Kit has been developed, with minimal 
 To get started with the project, clone the repository and install the necessary dependencies:
 
 ```bash
-git clone git@github.com:Fafnur/buy-and-fly.git
-cd buy-and-fly
+git clone git@github.com:Fafnur/uni-ui.git
+cd uni-ui
 yarn install
 ```
 

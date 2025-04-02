@@ -26,7 +26,7 @@ export const appConfig: ApplicationConfig = {
     provideMetrics({
       counter: 97634082,
       ids: ['G-W88RSN32B9'],
-      domains: ['buy-and-fly.fafn.ru', 'fafn.ru'],
+      domains: ['uni-ui.fafn.ru', 'fafn.ru'],
       paths: [],
     }),
   ],

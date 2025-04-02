@@ -12,7 +12,6 @@ import {
   SearchReverseComponent,
 } from '@uni/search/ui/fields';
 import { SearchFormComponent } from '@uni/search/ui/form';
-import { ButtonComponent } from '@uni/ui/buttons';
 
 @Component({
   selector: 'uni-search-railway-form',
@@ -24,7 +23,6 @@ import { ButtonComponent } from '@uni/ui/buttons';
     SearchReverseComponent,
     SearchDateComponent,
     SearchPassengersComponent,
-    ButtonComponent,
   ],
   templateUrl: './search-railway-form.component.html',
   styleUrl: './search-railway-form.component.scss',

@@ -8,12 +8,11 @@ import { startWith, tap, withLatestFrom } from 'rxjs';
 import { castQueryParams } from '@uni/core';
 import { ButtonComponent } from '@uni/ui/buttons';
 import { CardComponent } from '@uni/ui/cards';
-import { TitleComponent } from '@uni/ui/title';
 
 @Component({
   selector: 'uni-search-filters',
   standalone: true,
-  imports: [ButtonComponent, TitleComponent, CardComponent],
+  imports: [ButtonComponent, CardComponent],
   templateUrl: './search-filters.component.html',
   styleUrl: './search-filters.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

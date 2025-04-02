@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { AlignDirective } from '@uni/ui/utils';
 
@@ -9,7 +8,6 @@ import { MobileDirective } from './mobile.directive';
 @Component({
   selector: 'uni-container',
   standalone: true,
-  imports: [RouterOutlet],
   template: '<ng-content/>',
   styleUrl: './container.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

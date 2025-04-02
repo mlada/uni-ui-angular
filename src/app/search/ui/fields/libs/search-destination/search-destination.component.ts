@@ -8,7 +8,6 @@ import { ExtraClassService, toClass } from '@uni/core';
 import type { SearchDestination, SearchFieldOptions } from '@uni/search/common';
 import type { AutocompleteOptions } from '@uni/ui/autocomplete';
 import { AutocompleteComponent } from '@uni/ui/autocomplete';
-import { InputComponent } from '@uni/ui/input';
 
 import { SearchDestinationService } from './search-destination.service';
 
@@ -20,7 +19,7 @@ export interface SearchDestinationOptions extends SearchFieldOptions {
 @Component({
   selector: 'uni-search-destination',
   standalone: true,
-  imports: [InputComponent, AutocompleteComponent],
+  imports: [AutocompleteComponent],
   templateUrl: './search-destination.component.html',
   styleUrl: './search-destination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

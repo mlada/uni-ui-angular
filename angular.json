@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "buy-and-fly": {
+    "uni-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:pipe": {
@@ -33,7 +33,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "localize": ["ru"],
-            "outputPath": "dist/buy-and-fly",
+            "outputPath": "dist/uni-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -50,12 +50,7 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -92,10 +87,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "buy-and-fly:build:production"
+              "buildTarget": "uni-ui:build:production"
             },
             "development": {
-              "buildTarget": "buy-and-fly:build:development"
+              "buildTarget": "uni-ui:build:development"
             }
           },
           "defaultConfiguration": "development"

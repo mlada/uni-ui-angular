@@ -2,14 +2,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { PathPipe, PATHS } from '@uni/core';
-import { AnchorComponent } from '@uni/ui/buttons';
 import { ContainerComponent } from '@uni/ui/container';
-import { HomeComponent, LogoComponent } from '@uni/ui/icons';
+import { LogoComponent } from '@uni/ui/icons';
 
 @Component({
   selector: 'uni-header',
   standalone: true,
-  imports: [LogoComponent, HomeComponent, ContainerComponent, RouterLink, PathPipe, AnchorComponent],
+  imports: [LogoComponent, ContainerComponent, RouterLink, PathPipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -9,10 +9,8 @@ import {
   SearchDestinationComponent,
   SearchGroupComponent,
   SearchPassengersComponent,
-  SearchReverseComponent,
 } from '@uni/search/ui/fields';
 import { SearchFormComponent } from '@uni/search/ui/form';
-import { ButtonComponent } from '@uni/ui/buttons';
 
 @Component({
   selector: 'uni-search-hotel-form',
@@ -21,10 +19,8 @@ import { ButtonComponent } from '@uni/ui/buttons';
     SearchFormComponent,
     SearchGroupComponent,
     SearchDestinationComponent,
-    SearchReverseComponent,
     SearchDateComponent,
     SearchPassengersComponent,
-    ButtonComponent,
   ],
   templateUrl: './search-hotel-form.component.html',
   styleUrl: './search-hotel-form.component.scss',

@@ -3,12 +3,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { AccordionComponent } from '@uni/ui/accordion';
 import { HeadlineComponent } from '@uni/ui/headline';
-import { ArrowDownComponent, ArrowUpComponent } from '@uni/ui/icons';
 
 @Component({
   selector: 'uni-questions',
   standalone: true,
-  imports: [HeadlineComponent, CdkAccordionModule, ArrowDownComponent, ArrowUpComponent, AccordionComponent],
+  imports: [HeadlineComponent, CdkAccordionModule, AccordionComponent],
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
