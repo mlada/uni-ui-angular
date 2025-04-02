@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://photo.hotellook.com" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
@@ -17,6 +17,18 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="msapplication-TileColor" content="#172659" />
     <meta name="theme-color" content="#ffffff" />
+
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="ru" />
+    <meta name="og:site_name" content="UNI UI-KIT" />
+    <meta name="og:image" content="/images/project.jpg" />
+    <meta name="og:image:type" content="image/jpeg" />
+    <meta name="og:image:width" content="1280" />
+    <meta name="og:image:height" content="800" />
+
+
+
+
     <style>
       *,
       *::before,
@@ -217,7 +229,7 @@
         min-height: 100vh;
         line-height: 1.5;
         font-family:
-          Arial,
+          Roboto,
           ui-sans-serif,
           system-ui,
           -apple-system,
@@ -271,6 +283,10 @@
     </style>
   </head>
   <body>
-    <uni-root></uni-root>
+    <uni-root>
+      <noscript
+        ><div><img src="https://mc.yandex.ru/watch/97634082" style="position: absolute; left: -9999px" alt="" /></div
+      ></noscript>
+    </uni-root>
   </body>
 </html>

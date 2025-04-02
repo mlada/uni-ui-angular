@@ -3,28 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "uni-ui-angular": {
+    "buy-and-fly": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:pipe": {
+          "standalone": true
+        },
         "@schematics/angular:component": {
           "style": "scss",
           "changeDetection": "OnPush",
+          "standalone": true,
           "skipTests": true
         }
       },
       "root": "",
       "sourceRoot": "src",
       "prefix": "uni",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": {
+            "translation": "src/i18n/messages.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/uni-ui-angular",
+            "localize": ["ru"],
+            "outputPath": "dist/buy-and-fly",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules", "./"]
+            },
+            "allowedCommonJsDependencies": ["dotenv", "hammerjs", "http-proxy-middleware"],
             "assets": [
               {
                 "glob": "**/*",
@@ -32,10 +50,19 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
+              "index": {
+                "input": "src/index.prod.html",
+                "output": "index.html"
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -44,8 +71,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"
@@ -60,12 +87,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "uni-ui-angular:build:production"
+              "buildTarget": "buy-and-fly:build:production"
             },
             "development": {
-              "buildTarget": "uni-ui-angular:build:development"
+              "buildTarget": "buy-and-fly:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +129,7 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "schematicCollections": ["@angular-eslint/schematics"],
+    "analytics": false
   }
 }
